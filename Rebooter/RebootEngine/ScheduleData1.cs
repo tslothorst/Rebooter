@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.DirectoryServices.ActiveDirectory;
+using System.DirectoryServices;
 
 namespace RebootEngine
 {
@@ -17,6 +19,15 @@ namespace RebootEngine
             {
                 control.ScheduleReboot(host, RebootTime);
             }
+        }
+
+        private bool VerifyHostName(string HostName) 
+        {
+            string DomainName = Domain.GetCurrentDomain().ToString();
+            string LdapAddress = "LDAP://" + DomainName + ":3289";
+            DirectoryEntry de = new DirectoryEntry(LdapAddress);
+            DirectorySearcher ds = new DirectorySearcher(de);
+            return true;
         }
     }
 

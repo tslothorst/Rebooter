@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.srvlist = new System.Windows.Forms.ListView();
+            this.usernameDisplay = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // serverbox
@@ -120,11 +121,21 @@
             this.srvlist.TabIndex = 8;
             this.srvlist.UseCompatibleStateImageBehavior = false;
             // 
+            // usernameDisplay
+            // 
+            this.usernameDisplay.AutoSize = true;
+            this.usernameDisplay.Location = new System.Drawing.Point(9, 419);
+            this.usernameDisplay.Name = "usernameDisplay";
+            this.usernameDisplay.Size = new System.Drawing.Size(67, 13);
+            this.usernameDisplay.TabIndex = 9;
+            this.usernameDisplay.Text = "Current user:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.usernameDisplay);
             this.Controls.Add(this.srvlist);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -152,6 +163,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListView srvlist;
+        private System.Windows.Forms.Label usernameDisplay;
     }
 }
 

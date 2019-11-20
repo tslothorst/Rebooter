@@ -17,8 +17,10 @@ namespace Rebooter
 
         public Form1()
         {
-            InitializeComponent();          
+            InitializeComponent();            
+            usernameDisplay.Text = "Current user: " + Environment.UserName;
         }
+
         
         private void button3_Click(object sender, EventArgs e)
         {
